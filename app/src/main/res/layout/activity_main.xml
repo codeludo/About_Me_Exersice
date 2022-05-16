@@ -16,16 +16,47 @@
         android:textAlignment="center"
         style="@style/NameStyle" />
 
+    <EditText
+        android:id="@+id/nickname_edit"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/what_is_your_nickname"
+        android:inputType="textPersonName"
+        android:textColorHint="#78909C" />
+
+    <Button
+        android:id="@+id/done_button"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/done"
+        android:textSize="15sp"
+        app:backgroundTint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/nickname_text"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="gone"
+        android:text=""/>
+
     <ImageView
         android:id="@+id/start_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_margin"
+        android:contentDescription="@string/yellow_star"
         app:srcCompat="@android:drawable/btn_star_big_on"
-        android:contentDescription="@string/yellow_star" />
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
 
     <ScrollView
         android:id="@+id/bio_scroll"
+        android:layout_marginTop="@dimen/layout_margin"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -39,8 +70,10 @@
                 android:id="@+id/user_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
                 app:srcCompat="@drawable/image"
+                tools:ignore="ImageContrastCheck"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
