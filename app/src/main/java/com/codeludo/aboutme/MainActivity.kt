@@ -24,9 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        nickname_text = findViewById(R.id.nickname_text)
-        nickname_edit = findViewById(R.id.nickname_edit)
-        done_button = findViewById(R.id.done_button)
+        nickname_text = binding.nicknameText
+        nickname_edit = binding.nicknameEdit
+        done_button = binding.doneButton
 
         done_button.setOnClickListener {
             addNickname(it)
