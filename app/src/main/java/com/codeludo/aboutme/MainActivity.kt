@@ -9,8 +9,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.ViewAnimator
+import androidx.databinding.DataBindingUtil
+import com.codeludo.aboutme.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
 
     private lateinit var done_button: Button
     private lateinit var nickname_text: TextView
@@ -18,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         nickname_text = findViewById(R.id.nickname_text)
         nickname_edit = findViewById(R.id.nickname_edit)
